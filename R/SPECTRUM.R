@@ -47,7 +47,7 @@ patient_group_predict <- function(proportion){
 #' @param matrix Rows should be cells and columns should be genes.
 #' @param sampleID should be a vector of samplID matched with each cell in matrix
 #' @return  'group'
-merge_perdict <- function(matrix, sampleID = NULL){
+merge_predict <- function(matrix, sampleID = NULL){
   cell.type <- celltype_predict(matrix)
   df <- as.data.frame(cbind(cell.type,sampleID))
   colnames(df) <- c("cell.type","sampleID")
