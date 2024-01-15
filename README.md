@@ -43,7 +43,7 @@ library(reshape2)
 ```
 ### load data
 ```
-load(file = "data/Qian.RData")
+data("Qian",package="SPECTRUM")
 sampleID <- Qian$sampleID
 Qian <- Qian[,which(colnames(Qian) != "sampleID")]
 ```
