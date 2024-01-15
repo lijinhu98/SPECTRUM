@@ -23,7 +23,7 @@ Gambler_R <- function(test_r, prob_r,gene_list = NULL){
 #' @return  'cellType'
 
 celltype_predict <- function(matrix){
-  l <- load(file = "data/panC_cell_ref.RData")
+  l <- data("panC_cell_ref",package="SPECTRUM")
   panC_cell_ref <- eval(parse(text = l))
   prob_r <- t(panC_cell_ref)
   out <- Gambler_R(matrix, prob_r, gene_list = rownames(prob_r))
@@ -35,7 +35,7 @@ celltype_predict <- function(matrix){
 #' @return  'group'
 
 patient_group_predict <- function(proportion){
-  l <- load(file = "data/panC_samp_ref.RData")
+  l <- data("panC_samp_ref",package="SPECTRUM")
   panC_samp_ref <- eval(parse(text = l))
   prob_r <- t(panC_samp_ref)
   proportion <- proportion * 1000000
