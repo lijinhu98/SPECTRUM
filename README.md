@@ -28,10 +28,32 @@ group.predict
 ```
 ### predict patient group from cell X gene matrix
 For query set matrix, rows should be cells and column should be genes (TPM) but the last column should be "sampleID" for each cell
-example:
 ```
 sampleID <- matrix$sampleID
 matrix <- matrix[,which(colnames(matrix) != "sampleID")]
 group.predict <- merge_perdict(matrix,sampleID)
+group.predict
+```
+
+## Example
+### Library
+```
+library(tidyverse)
+library(reshape2)
+```
+### load data
+```
+load(file = "data/Qian.RData")
+sampleID <- Qian$sampleID
+Qian <- Qian[,which(colnames(Qian) != "sampleID")]
+```
+### predict cell type
+```
+cell.type <- celltype_predict(Qian)
+cell.type
+```
+### predict patient group from cell X gene matrix
+```
+group.predict <- merge_perdict(Qian,sampleID)
 group.predict
 ```
