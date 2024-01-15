@@ -24,7 +24,7 @@ For query set matrix, rows should be cells and column should be genes (TPM/CPM).
 cell.type <- celltype_predict(matrix)
 cell.type
 ```
-### predict patient group from sub cell type proportion
+### predict patient group from sub cell type proportion in each patient
 For query set proportion, rows should be sampleID and column should be proportion of each sub cell type in each person.
 ```
 group.predict <- patient_group_predict(proportion)
