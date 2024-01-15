@@ -31,7 +31,7 @@ For query set matrix, rows should be cells and column should be genes (TPM) but 
 ```
 sampleID <- matrix$sampleID
 matrix <- matrix[,which(colnames(matrix) != "sampleID")]
-group.predict <- merge_perdict(matrix,sampleID)
+group.predict <- merge_predict(matrix,sampleID)
 group.predict
 ```
 
@@ -54,6 +54,6 @@ cell.type
 ```
 ### predict patient group from cell X gene matrix
 ```
-group.predict <- merge_perdict(Qian,sampleID)
+group.predict <- merge_predict(Qian,sampleID)
 group.predict
 ```
