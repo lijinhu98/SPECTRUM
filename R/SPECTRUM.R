@@ -58,7 +58,8 @@ merge_predict <- function(matrix, sampleID = NULL){
   rownames(proportion) <- proportion$sampleID
   proportion <- proportion[,-1]
   group.predict <- patient_group_predict(proportion)
-  group <- as.data.frame(sampleID = cbind(rownames(proportion),group.predict))
+  group <- as.data.frame(cbind(rownames(proportion),group.predict))
+  colnames(group) <- c("sampleID","group.predict")
   return(group)
 }
 
