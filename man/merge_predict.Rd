@@ -1,5 +1,5 @@
-\name{merge_perdict}
-\alias{merge_perdict}
+\name{merge_predict}
+\alias{merge_predict}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 predict patient group
