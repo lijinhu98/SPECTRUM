@@ -8,7 +8,7 @@ predict patient group
 predicted cell type
 }
 \usage{
-merge_perdict(matrix, sampleID = NULL)
+merge_predict(matrix, sampleID = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
