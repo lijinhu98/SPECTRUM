@@ -38,7 +38,7 @@ patient_group_predict <- function(proportion){
   l <- data("panC_samp_ref",package="SPECTRUM")
   panC_samp_ref <- eval(parse(text = l))
   prob_r <- t(panC_samp_ref)
-  proportion <- proportion * 1000000
+  proportion <- proportion * 10000
   out <- Gambler_R(proportion, prob_r, gene_list = rownames(prob_r))
   return(out)
 }
